@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Today's Weather?</title>
+	
+<style>
+	header {
+		background-color: rgba(0,0,0,0.3);
+	}
+	
+	.header {
+		float: left;
+	}
+	
+	@media screen and (min-width: 1201px) {
+		h1 {
+			font-size: 60px;
+		}
+	}
+	
+	@media screen and (max-width: 1200px) {
+		h1 {
+			font-size: 50px;
+		}
+	}
+	
+	@media screen and (max-width: 992px) {
+		h1 {
+			font-size: 70px;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		h1 {
+			font-size: 45px;
+		}
+	}
+	
+
+	
+
+	
+	h1 {
+		font-family: 'Teko', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: white;
+		
+	}
+	
+	h2 {
+		font-family: 'Teko', sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: white;
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+	
+	h3 {
+		font-family: 'Teko', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: white;
+		
+		padding-bottom: -100px;
+	}
+	
+	@media screen and (min-width: 1201px) {
+		h3 {
+			font-size: 500px;
+			margin-bottom: -100px;
+		}
+	}
+	
+	@media screen and (max-width: 1200px) {
+		h3 {
+			font-size: 400px;
+			margin-bottom: -100px;
+		}
+	}
+	
+	@media screen and (max-width: 992px) {
+		h3 {
+			font-size: 300px;
+			padding-left: 50px;
+			margin-bottom: -15px;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		h3 {
+			font-size: 430px;
+			margin-bottom: -100px;
+			margin-top: 50px;
+		}
+	}
+	
+	
+	
+	h4 {
+		font-family: 'Teko', sans-serif;
+		font-weight: lighter;
+		text-transform: uppercase;
+		color: white;
+		font-size: 70px;
+		letter-spacing: 2px;
+		
+	}
+	
+	@media screen and (max-width: 992px) {
+		h4 {
+			padding-left: 0px;
+			font-size: 60px;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		h4 {
+			padding-left: 50px;
+			font-size: 70px;
+		
+			
+		}
+	}
+	
+	.today {
+		float: left;
+		padding-top: 15px;
+		letter-spacing: 3px;
+	}
+	
+	.container {
+		/*background-image: url(rainy.jpg);*/
+		background-size: cover;
+		background-position: fixed;
+	}
+	
+	.zip {
+		display: inline;
+	}
+	
+	.icon {
+		margin-left: 20px;
+		padding-right: 50px;
+		padding-top: 25px;
+		margin-bottom: -100px;
+	}
+	
+	.icon img {
+		padding-top: 5px;
+	}
+	
+	@media screen and (min-width: 1201px) {
+		.icon img {
+			width: 480px;
+			height: auto;	
+		}
+	}
+	
+	@media screen and (max-width: 1200px) {
+		.icon img {
+			width: 400px;
+			height: auto;
+			
+		}
+	}
+	
+	
+	@media screen and (max-width: 992px) {
+		.icon img {
+			width: 600px;
+			height: auto;
+			padding-bottom: 30px;
+			margin-left: 5px;
+			margin-bottom: 50px;
+			
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		.icon img {
+			width: 450px;
+			height: auto;
+			padding-bottom: 30px;
+			margin-bottom: 10px;
+			margin-left: 5px;
+			
+		}
+	}
+	
+	@media screen and (max-width: 500px) {
+		.icon img {
+			width: 400px;
+			height: auto;
+			margin-left: 5px;
+			
+		}
+	}
+	
+	
+	.degrees {
+		margin-left: 0px;
+		float: left;
+	}
+	
+	
+	.input-group {
+		padding-top: 26px;
+		padding-bottom: 20px;
+	}
+	
+	input[type="text"]{
+		background-color: rgba(255,255,255,0.75);
+		border-radius: 0px;
+		
+	}
+	
+	.btn {
+		background-color: #8E8E8E;
+		color: black;
+		border-radius: 0px;
+		border: none;
+		cursor: pointer;
+	}
+	@media screen and (min-width: 992px) {
+	.number  {
+		margin-left: -20px;
+		}
+	}
+	
+	.number, .status {
+		float: left;
+	}
+	
+	@media screen and (min-width: 992px) {
+		.number, .status {
+		
+		/*margin-bottom: -30px;*/
+			
+		}
+	}
+	
+	@media screen and (max-width: 992px) {
+		.status {
+		
+		margin-top: 40px;
+		/*padding-left: 145px;*/
+			font-size: 50px;
+		
+		}
+	}
+	
+	
+	
+	
+	</style>	
+	
+	
+	
+</head>
+<body>
+<section class="container">
+
+
+	<div class="row">
+	<header class="col-12">
+		<div class="today col-lg-6 col-md-12"><h1>Today's Weather?</h1></div> 
+		<div class="input-group mb-3 col-lg-6 col-12 col-md-12">
+  <input type="text" class="form-control" id="zipCode" placeholder="enter zip code" aria-label="enter zipcode" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn" id="search_btn" type="button">SUBMIT</button>
+  </div>
+</div>
+		</header>
+		</div>
+	
+	
+	<div class="row weather">
+		<div class="icon col-12 col-md-12 col-lg-6" id="icon">
+		<!-- <h2>City Name, State</h2> -->
+		<!--	<img src="icon_rain.png" class="img-fluid" alt="icon weather image">-->
+		</div>
+		
+		
+		<div class="degrees col-sm-12 col-md-12 col-lg-5">
+		<div class="number" id="number"><!--<h3>70&deg; </h3>--></div><div class="status" id="status">
+		<!--<h4>RAINY</h4>--></div>
+		</div>
+		
+	</div>	
+		
+			
+	
+	
+
+</section>
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="js/weather1.js"></script>    
+</body>
+</html>
